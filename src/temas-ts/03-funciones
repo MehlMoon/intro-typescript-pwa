@@ -1,0 +1,47 @@
+//Manejo de Funciones
+function sumar(a:number,b:number,c:number=0):number{
+    /*if(c){ //Si hay C, hace a+b+c, si no, solamente hace a+b
+        return a+b+c;
+    }
+    else{
+        return a+b;
+    }*/
+    return a+b+c;
+}
+console.log(sumar(5,3));
+console.log(sumar(5,3,7));
+
+//Función Sumar
+function sumar2(a:number,b:number,c:number=0):void{
+    console.log(a+b+c);
+}
+console.log(sumar2(2,2,2));
+
+//Función Multiplicar
+function multiplicar(numero:number, otronumero?:number, base:number=1):number{
+    return numero*base;
+}
+const resultado=multiplicar(5,10,4);
+console.log(resultado);
+
+//Interfaz Alumno
+interface Alumno2{
+    nombre:string;
+    edad:number;
+    muestraEdad:()=>void;
+}
+
+//Función Cursar (los voids no regresan valores)
+function cursar(alumno:Alumno2, nuevaEdad:number):void{
+    alumno.edad+=nuevaEdad; //Esto de "+=" lo que hace es reasignar un nuevo valor
+    console.log(alumno);
+}
+
+const nuevoAlumno:Alumno2={
+    nombre:'Mario',
+    edad:23,
+    muestraEdad(){
+        console.log('EDAD DEL ALUMNO: ',this.edad);
+    },
+}
+console.log(nuevoAlumno,28);
