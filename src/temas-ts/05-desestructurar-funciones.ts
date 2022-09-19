@@ -1,5 +1,5 @@
 //Interfaz Producto
-interface Producto{
+export interface Producto{
     desc:string;
     precio:number;
 }
@@ -29,7 +29,7 @@ const IVATot=calcularIVA(articulos1);
 console.log(`IVA: ${IVATot}`);
 
 //Lo mismo pero generamos un arreglo para regresar más de un valor
-function calcularIVA2(productos:Producto[]):[number,number]{
+export function calcularIVA2(productos:Producto[]):[number,number]{
     let total=0;
     productos.forEach(({precio})=>{ //Los objetos se desestructuran con llaves
         total+=precio;
